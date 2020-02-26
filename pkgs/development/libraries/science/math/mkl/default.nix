@@ -36,6 +36,7 @@ stdenvNoCC.mkDerivation (rec {
   '' else ''
     rpmextract rpm/intel-mkl-common-c-${date}-${rel}-${date}-${rel}.noarch.rpm
     rpmextract rpm/intel-mkl-core-rt-${date}-${rel}-${date}-${rel}.x86_64.rpm
+    rpmextract rpm/intel-mkl-core-${date}-${rel}-${date}-${rel}.x86_64.rpm
     rpmextract rpm/intel-openmp-19.0.3-${rel}-19.0.3-${rel}.x86_64.rpm
   '';
 
@@ -92,5 +93,5 @@ stdenvNoCC.mkDerivation (rec {
   # fixed-output derivations.
 	outputHashAlgo = "sha256";
 	outputHashMode = "recursive";
-	outputHash = "101krzh2mjbfx8kvxim2zphdvgg7iijhbf9xdz3ad3ncgybxbdvw";
+	outputHash = "0zz39n32rh47pdl1c9qgm6xsxg3k8lfb55xghdqmhqk0cy4v4ski";
  })
