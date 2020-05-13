@@ -22,6 +22,13 @@ stdenv.mkDerivation {
     rm -rf $out/src
   '';
 
+  preFixup = ''
+    for f in $(find $out/bin/ $out/libexec/ -type f -executable); do
+      wrapProgram "$f" \
+        --prefix FSLDIR : "$out" \
+    done
+  '';
+
   meta = {
     description = "FMRIB Software Library, analysis tools for brain imaging data";
     homepage = "https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FSL";
