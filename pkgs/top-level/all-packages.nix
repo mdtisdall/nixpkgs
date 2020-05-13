@@ -24724,6 +24724,8 @@ in
 
   dcmtk = callPackage ../applications/science/medicine/dcmtk { };
 
+  fsl = callPackage ../applications/science/medicine/fsl {};
+
   ### SCIENCE/PHYSICS
 
   elmerfem = callPackage ../applications/science/physics/elmerfem {};
